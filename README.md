@@ -7,7 +7,8 @@ Requirements
 - torchvision 0.9.0
 
 
-To run the MNIST_classification.
+To run the MNIST_classification
+
 If you already download the MNIST dataset, download=False.
 If not, download=True.
 ~~~
