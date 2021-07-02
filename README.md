@@ -6,7 +6,10 @@ Requirements
 - pytorch 1.8.0
 - torchvision 0.9.0
 
-If you already download a dataset, download=False.
+
+To run the MNIST-classification...
+
+If you already download the MNIST dataset, download=False.
 If not, download=True.
 
 ~~~
