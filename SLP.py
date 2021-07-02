@@ -1,25 +1,33 @@
 import torch
 
-# device
+# Set device
+# device can map the variable depending on the environment (CPU, GPU)
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 # Reproducibility
+# can make same random variable
 torch.manual_seed(123)
 if device == 'cuda':
     torch.cuda.manual_seed_all(123)
 
-# input
+# Setup the input
 X = torch.FloatTensor([[1], [2], [3]]).to(device)
 Y = torch.FloatTensor([[1], [2], [3]]).to(device)
 
-# model
-layer = torch.nn.Linear(in_features=1, out_features=1, bias=True).to(device)
+# Setup the model
+layer = torch.nn.Linear(
+    in_features=1,
+    out_features=1,
+    bias=True).to(device)
 
 # Setup criterion
+# mean squared error = mean((X-Y)^2)
 criterion = torch.nn.MSELoss()
 
 # Setup optimizer
-optimizer = torch.optim.SGD(layer.parameters(), lr=0.1)
+optimizer = torch.optim.SGD(
+    params=layer.parameters(),  # parameters to update
+    lr=0.1)  # initial learning rate
 
 # training
 for step in range(100):
