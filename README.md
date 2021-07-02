@@ -2,7 +2,7 @@
 
 This is for basic pytorch code for beginner.
 
-requirements
+Requirements
 - pytorch 1.8.0
 - torchvision 0.9.0
 
