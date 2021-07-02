@@ -8,7 +8,7 @@ requirements
 
 If you already downloaded the dataset, change the flag for download=False. If not download=True.
 
-'''
+~~~
 train_X = torchvision.datasets.MNIST('./data', True, transform=trans, download=False)
 test_X = torchvision.datasets.MNIST('./data', False, transform=trans, download=False)
-'''
+~~~
