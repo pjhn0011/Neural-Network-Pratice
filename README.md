@@ -8,10 +8,8 @@ Requirements
 
 
 To run the MNIST_classification
-[
-If you already download the MNIST dataset, download=False.
-If not, download=True.
-]
+	If you already download the MNIST dataset, download=False.
+	If not, download=True.
 ~~~
 train_X = torchvision.datasets.MNIST('./data', True, transform=trans, download=False)
 test_X = torchvision.datasets.MNIST('./data', False, transform=trans, download=False)
